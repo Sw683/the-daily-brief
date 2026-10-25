@@ -209,9 +209,9 @@ export const repository = {
       WHERE id = ?
     `);
     stmt.run(
-      updates.title,
-      updates.summary,
-      updates.category,
+      updates.title ?? null,
+      updates.summary ?? null,
+      updates.category ?? null,
       updates.featured !== undefined ? (updates.featured ? 1 : 0) : null,
       updates.secondary !== undefined ? (updates.secondary ? 1 : 0) : null,
       updates.editorPick !== undefined ? (updates.editorPick ? 1 : 0) : null,
